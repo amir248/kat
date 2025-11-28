@@ -24,8 +24,13 @@
       background: linear-gradient(180deg,#071026 0%, #081025 35%, #071021 100%);
       color:#fff; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
       padding:40px; display:flex; align-items:center; justify-content:center;
+      min-height: 100vh;
     }
-    .container{width:100%; max-width:980px}
+    .container{
+      width:100%;
+      max-width:980px;
+      height:100vh;
+    }
     .card{
       display:grid; grid-template-columns: 320px 1fr; gap:28px; background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02)); border-radius:18px; padding:28px; box-shadow:0 10px 30px rgba(2,6,23,0.6);
       backdrop-filter: blur(6px);
@@ -74,6 +79,7 @@
       .btn-download{display:none}
     }
   </style>
+   <link rel="icon" href="img/kat.avif" type="image/x-icon">
 </head>
 <body>
   <div class="container">
@@ -81,24 +87,26 @@
       <aside class="profile" aria-label="Профиль">
         <div class="photo" aria-hidden="true">
           <!-- Замените src на своё фото: photo.jpg -->
-          <img src="photo.jpg" alt="Фото Имя Фамилия" onerror="this.style.display='none'">
+          <picture>
+            <img src="img/kat.avif" alt="Фото Екатерина Носова" onerror="this.style.display='none'">
+          </picture>
           <!-- Если фото нет — красивый SVG: -->
-          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
+          <!-- <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;">
             <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f6a4c9"/><stop offset="1" stop-color="#ffd6e8"/></linearGradient></defs>
             <rect x="0" y="0" width="120" height="120" rx="60" fill="url(#g)"/>
             <g transform="translate(20,24)" fill="#ffffff">
               <circle cx="40" cy="24" r="18" opacity="0.95"/>
               <path d="M0 92c0-23 36-23 40-23s40 0 40 23v6H0v-6z" opacity="0.9"/>
             </g>
-          </svg>
+          </svg> -->
         </div>
-        <h1>Имя Фамилия</h1>
+        <h1>Екатерина Носова</h1>
         <div class="role">Позиция или профессия — SMM | Бьюти | Публичный имидж</div>
 
         <div class="contact">
-          <div class="pill">Город, Страна</div>
+          <div class="pill">Томск, Россия</div>
           <a href="mailto:email@example.com">email@example.com</a>
-          <a href="tel:+70000000000">+7 (900) 000-00-00</a>
+          <a href="tel:+7 952 184-63-67">+7 952 184-63-67</a>
           <a href="#" target="_blank" rel="noopener">behance / instagram / linkedin</a>
         </div>
 
@@ -174,7 +182,7 @@
           <div class="muted">Готова к релокации и к работе в офисе / удалённо. Доступна для съёмок и мероприятий.</div>
           <div class="big-contact">
             <a class="pill" href="mailto:email@example.com">email@example.com</a>
-            <a class="pill" href="tel:+70000000000">+7 (900) 000-00-00</a>
+            <a class="pill" href="tel:+7 952 184-63-67">+7 952 184-63-67</a>
             <a class="pill" href="#">Instagram / Portfolio</a>
           </div>
         </section>
